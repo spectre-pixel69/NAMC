@@ -697,11 +697,11 @@ function radarPt(cx,cy,R,frac,k){var a=(-90+72*k)*Math.PI/180;return [cx+R*frac*
 function radarChart(list,px){
   var keys=['gates','consistency','racecraft','adaptability','smoothness'];
   var labs=['GATES','CONSIST','RACE','ADAPT','SMOOTH'];
-  var cx=140,cy=118,R=78,ri,k,p,pl,an,d,it,val;
-  var s='<svg viewBox="0 0 280 250" style="width:100%;max-width:'+px+'px;display:block;margin:8px auto 2px">';
+  var cx=150,cy=125,R=90,ri,k,p,pl,an,d,it,val;
+  var s='<svg viewBox="0 0 300 270" style="width:100%;max-width:'+px+'px;display:block;margin:8px auto 2px">';
   var rings=[0.25,0.5,0.75,1];
   for(ri=0;ri<rings.length;ri++){var pr='';for(k=0;k<5;k++){p=radarPt(cx,cy,R,rings[ri],k);pr+=p[0].toFixed(1)+','+p[1].toFixed(1)+' ';}s+='<polygon points="'+pr+'" fill="none" stroke="#DDDDDD" stroke-width="1"/>';}
-  for(k=0;k<5;k++){p=radarPt(cx,cy,R,1,k);s+='<line x1="'+cx+'" y1="'+cy+'" x2="'+p[0].toFixed(1)+'" y2="'+p[1].toFixed(1)+'" stroke="#DDDDDD" stroke-width="1"/>';pl=radarPt(cx,cy,R+16,1,k);an=(k===0)?'middle':(pl[0]<cx?'end':'start');s+='<text x="'+pl[0].toFixed(1)+'" y="'+(pl[1]+3).toFixed(1)+'" text-anchor="'+an+'" font-family="Barlow Condensed,sans-serif" font-size="11" font-weight="700" fill="#5A5F66">'+labs[k]+'</text>';}
+  for(k=0;k<5;k++){p=radarPt(cx,cy,R,1,k);s+='<line x1="'+cx+'" y1="'+cy+'" x2="'+p[0].toFixed(1)+'" y2="'+p[1].toFixed(1)+'" stroke="#DDDDDD" stroke-width="1"/>';pl=radarPt(cx,cy,R+18,1,k);an=(k===0)?'middle':(pl[0]<cx?'end':'start');s+='<text x="'+pl[0].toFixed(1)+'" y="'+(pl[1]+3).toFixed(1)+'" text-anchor="'+an+'" font-family="Barlow Condensed,sans-serif" font-size="12" font-weight="700" fill="#5A5F66">'+labs[k]+'</text>';}
   for(d=0;d<list.length;d++){it=list[d];var dp='';for(k=0;k<5;k++){val=it.stats[keys[k]]||0;p=radarPt(cx,cy,R,val/100,k);dp+=p[0].toFixed(1)+','+p[1].toFixed(1)+' ';}s+='<polygon points="'+dp+'" fill="'+it.color+'" fill-opacity="0.22" stroke="'+it.color+'" stroke-width="2"/>';for(k=0;k<5;k++){val=it.stats[keys[k]]||0;p=radarPt(cx,cy,R,val/100,k);s+='<circle cx="'+p[0].toFixed(1)+'" cy="'+p[1].toFixed(1)+'" r="2.6" fill="'+it.color+'"/>';}}
   s+='</svg>';return s;
 }
@@ -739,9 +739,9 @@ function buildCard(r){
   t0+='<div style="flex:1;min-width:0">';
   for(var i=0;i<keys.length;i++){
     var v=r.stats[keys[i]];
-    t0+='<div style="display:flex;justify-content:space-between;align-items:center;gap:6px;padding:6px 0 6px 8px;border-bottom:1px solid #EEEEEE;border-left:3px solid '+ac(v)+'">'+
-      '<span class="stat-label" style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis">'+lbls[i]+'</span>'+
-      '<span style="font-family:Bebas Neue,sans-serif;font-size:20px;line-height:1;color:'+sc(v)+';flex-shrink:0">'+v+'%</span>'+
+    t0+='<div style="padding:6px 0 6px 8px;border-bottom:1px solid #EEEEEE;border-left:3px solid '+ac(v)+'">'+
+      '<div style="display:flex;justify-content:space-between;align-items:baseline;gap:6px"><span class="stat-label" style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis">'+lbls[i]+'</span><span style="font-family:Bebas Neue,sans-serif;font-size:18px;line-height:1;color:'+sc(v)+';flex-shrink:0">'+v+'%</span></div>'+
+      '<div style="height:6px;background:#E5E5E5;border-radius:3px;overflow:hidden;margin-top:4px"><div style="height:100%;width:'+v+'%;background:'+bg(v)+'"></div></div>'+
       '</div>';
   }
   t0+='<div style="display:flex;justify-content:space-between;align-items:center;gap:6px;padding:7px 8px;margin-top:4px;background:rgba(245,197,24,0.10);border-left:3px solid '+ac(r.ovr)+'">'+
@@ -749,7 +749,7 @@ function buildCard(r){
     '<span style="font-family:Bebas Neue,sans-serif;font-size:22px;line-height:1;color:'+sc(r.ovr)+'">'+r.ovr+'</span>'+
     '</div>';
   t0+='</div>';
-  t0+='<div style="flex:1;min-width:0">'+radarChart([{name:r.name,color:'#E10600',stats:r.stats}],220)+'</div>';
+  t0+='<div style="flex:1.15;min-width:0">'+radarChart([{name:r.name,color:'#E10600',stats:r.stats}],300)+'</div>';
   t0+='</div>';
   t0+=namcVision(r);
 
@@ -960,7 +960,23 @@ function runCompare() {
   for (var i=0;i<RIDERS.length;i++){ if(RIDERS[i].id===id2){r2=RIDERS[i];break;} }
   if (!r2) return;
   var scroll = document.getElementById('cmpScroll');
-  var cmpRadar='<div style="padding:14px;background:#F8F8F8;border-bottom:3px solid #EEEEEE"><div style="font-family:Bebas Neue,sans-serif;font-size:16px;letter-spacing:2px;color:#E10600;margin-bottom:2px">HEAD-TO-HEAD PROFILE</div>'+radarChart([{name:CMP_R1.name,color:'#E10600',stats:CMP_R1.stats},{name:r2.name,color:'#0B3D6B',stats:r2.stats}],280)+'<div style="display:flex;justify-content:center;gap:18px;margin-top:2px;font-family:Barlow Condensed,sans-serif;font-size:12px;font-weight:700"><span style="color:#E10600">&#9632; '+CMP_R1.name+'</span><span style="color:#0B3D6B">&#9632; '+r2.name+'</span></div></div>';
+  var wkeys=['gates','consistency','racecraft','adaptability','smoothness'];
+  var wlbls=['GATES','CONSISTENCY','RACECRAFT','ADAPTABILITY','SMOOTHNESS'];
+  var winRows='';
+  for(var wi=0;wi<wkeys.length;wi++){
+    var av=CMP_R1.stats[wkeys[wi]], bv=r2.stats[wkeys[wi]];
+    var wc=av>bv?'#E10600':(av<bv?'#0B3D6B':'#5A5F66');
+    var hi=Math.max(av,bv), lo=Math.min(av,bv);
+    winRows+='<div style="display:flex;justify-content:space-between;align-items:center;padding:7px 2px;border-bottom:1px solid #EEEEEE">'+
+      '<span style="font-family:Barlow Condensed,sans-serif;font-weight:700;letter-spacing:1px;color:'+wc+'">'+wlbls[wi]+'</span>'+
+      '<span><span style="font-family:Bebas Neue,sans-serif;font-size:20px;color:'+wc+'">'+hi+'%</span><span style="font-family:Barlow Condensed,sans-serif;font-size:12px;color:#999999;margin-left:6px">vs '+lo+'</span></span>'+
+      '</div>';
+  }
+  var cmpRadar='<div style="padding:14px;background:#F8F8F8;border-bottom:3px solid #EEEEEE">'+
+    '<div style="font-family:Bebas Neue,sans-serif;font-size:16px;letter-spacing:2px;color:#E10600;margin-bottom:2px">HEAD-TO-HEAD PROFILE</div>'+
+    radarChart([{name:CMP_R1.name,color:'#E10600',stats:CMP_R1.stats},{name:r2.name,color:'#0B3D6B',stats:r2.stats}],300)+
+    '<div style="display:flex;justify-content:center;gap:18px;margin:2px 0 8px;font-family:Barlow Condensed,sans-serif;font-size:12px;font-weight:700"><span style="color:#E10600">&#9632; '+CMP_R1.name+'</span><span style="color:#0B3D6B">&#9632; '+r2.name+'</span></div>'+
+    winRows+'</div>';
   scroll.innerHTML = cmpRadar +
     buildCmpCard(CMP_R1, r2, 'RIDER 1 — ' + CMP_R1.name.toUpperCase()) +
     buildCmpCard(r2, CMP_R1, 'RIDER 2 — ' + r2.name.toUpperCase()) +
