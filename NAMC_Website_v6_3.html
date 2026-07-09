@@ -186,6 +186,32 @@ footer{background:var(--blue);border-top:3px solid var(--red);padding:22px 40px;
 .ptbl td.g{color:var(--grn);font-weight:700;}
 .ptbl td.r{color:var(--red);font-weight:700;}
 .ptbl td.gold{color:#8B6914;font-weight:700;}
+/* ── MOBILE / RESPONSIVE — auto-adapts to phone vs laptop ── */
+@media(max-width:768px){
+  nav{padding:0 12px;gap:10px;}
+  .nwm{font-size:18px;letter-spacing:2px;}
+  .ndiv{display:none;}
+  .nlinks{gap:14px;flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
+  .nlinks::-webkit-scrollbar{display:none;}
+  .nlinks a{white-space:nowrap;}
+  .ncta{flex-shrink:0;padding:8px 12px;}
+  .hero{flex-direction:column;min-height:0;}
+  .hero-overlay{background:linear-gradient(180deg,rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.78) 100%);}
+  .hero-left{padding:32px 20px;}
+  .hero-title{font-size:clamp(52px,15vw,72px);}
+  .hero-btns{flex-wrap:wrap;}
+  .rider-panel{width:100%;}
+  .stats{grid-template-columns:repeat(2,1fr);}
+  .sec{padding:28px 20px;}
+  .sec-title{font-size:22px;}
+  .red-banner{padding:24px 20px;}
+  .red-banner h2{font-size:30px;letter-spacing:1px;}
+  .foot-links{flex-wrap:wrap;justify-content:center;}
+}
+@media(max-width:480px){
+  .stats{grid-template-columns:1fr 1fr;}
+  .hero-title{font-size:clamp(44px,13vw,60px);}
+}
 </style>
 </head>
 <body>
@@ -202,7 +228,7 @@ footer{background:var(--blue);border-top:3px solid var(--red);padding:22px 40px;
     <li><a href="#schedule">Schedule</a></li>
     <li><a href="#riders">Riders</a></li>
     <li><a href="#teams">Teams</a></li>
-    <li><a onclick="location.href=(window.innerWidth<=768?'NAMC_Draft_Pool_mobile_v7.html':'NAMC_Draft_Pool_desktop_v5.html')">Draft Pool</a></li>
+    <li><a onclick="location.href=(window.innerWidth<=768?'NAMC_Draft_Pool_mobile_v7.html':'NAMC_Draft_Pool_mobile_v7.html')">Draft Pool</a></li>
     <li><a onclick="location.href='NAMC_Path_to_Pros_Page.html'">Path to Pros</a></li>
     <li><a onclick="location.href='NAMC_Watch_v1_download.html'">Watch</a></li>
     <li><a onclick="location.href='NAMC_Partners_v1_download.html'">Partners</a></li>
@@ -249,7 +275,7 @@ footer{background:var(--blue);border-top:3px solid var(--red);padding:22px 40px;
     <h1 class="hero-title">THE RISING<span>TIDE.</span></h1>
     <p class="hero-sub">Professional Motocross · Reimagined · Season Opens March 27, 2027 · Fox Raceway · Pala, CA</p>
     <div class="hero-btns">
-      <button class="btn-gold" onclick="location.href=(window.innerWidth<=768?'NAMC_Draft_Pool_mobile_v7.html':'NAMC_Draft_Pool_desktop_v5.html')">&#x1F4CB; View Draft Pool</button>
+      <button class="btn-gold" onclick="location.href=(window.innerWidth<=768?'NAMC_Draft_Pool_mobile_v7.html':'NAMC_Draft_Pool_mobile_v7.html')">&#x1F4CB; View Draft Pool</button>
       <button class="btn-blue" onclick="location.href='NAMC_Amateur_Path_to_Pros_v2.html'">&#x2605; Path to Pros</button>
       <button class="btn-outline" onclick="location.href='NAMC_Rider_v4_download.html'">Rider Info</button>
     </div>
@@ -267,7 +293,7 @@ footer{background:var(--blue);border-top:3px solid var(--red);padding:22px 40px;
     </div>
     <div id="rp-rows"></div>
     <div class="rp-footer">
-      <div class="rp-cta" onclick="location.href=(window.innerWidth<=768?'NAMC_Draft_Pool_mobile_v7.html':'NAMC_Draft_Pool_desktop_v5.html')">View All 21 Riders ›</div>
+      <div class="rp-cta" onclick="location.href=(window.innerWidth<=768?'NAMC_Draft_Pool_mobile_v7.html':'NAMC_Draft_Pool_mobile_v7.html')">View All 21 Riders ›</div>
     </div>
   </div>
 </div>
@@ -301,7 +327,7 @@ footer{background:var(--blue);border-top:3px solid var(--red);padding:22px 40px;
         </div>
       </div>
 
-      <div class="nc" onclick="location.href=(window.innerWidth<=768?'NAMC_Draft_Pool_mobile_v7.html':'NAMC_Draft_Pool_desktop_v5.html')">
+      <div class="nc" onclick="location.href=(window.innerWidth<=768?'NAMC_Draft_Pool_mobile_v7.html':'NAMC_Draft_Pool_mobile_v7.html')">
         <div class="nc-photo">
           <img src="https://picsum.photos/seed/namc3/600/340" alt="NAMC Draft">
           <div class="nc-badge" style="background:#F5C518;color:#111;">DRAFT POOL</div>
