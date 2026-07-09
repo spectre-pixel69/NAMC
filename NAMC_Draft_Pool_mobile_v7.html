@@ -724,10 +724,12 @@ function buildCard(r){
   t0+='</div><div class="sec-hdr" style="margin-top:16px">Performance Stats</div><div class="stats-wrap">';
   for(var i=0;i<keys.length;i++){
     var v=r.stats[keys[i]];
+    var pts=Math.max(1,Math.min(5,Math.round(v/20)));
+    var dots='';
+    for(var j=1;j<=5;j++){ dots+='<span style="display:inline-block;width:13px;height:13px;border-radius:50%;margin-left:4px;background:'+(j<=pts?sc(v):'#DDDDDD')+'"></span>'; }
     t0+='<div class="stat-row" style="border-left-color:'+ac(v)+'">'+
       '<span class="stat-label">'+lbls[i]+'</span>'+
-      '<span class="stat-num" style="color:'+sc(v)+'">'+v+'</span>'+
-      '<div class="stat-bar-wrap"><div id="bf'+r.id+'-'+i+'" class="stat-fill" style="background:'+bg(v)+'"></div></div>'+
+      '<span style="display:flex;align-items:center"><span class="stat-num" style="font-size:18px;color:'+sc(v)+';margin-right:10px">'+pts+'/5</span>'+dots+'</span>'+
       '</div>';
   }
   t0+='<div class="stat-row" style="border-left-color:'+ac(r.ovr)+';background:rgba(245,197,24,0.06)">'+
