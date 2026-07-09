@@ -734,20 +734,23 @@ function buildCard(r){
     var tr=r.traits[i], icon=tr.t==='pos'?'\u2713':tr.t==='neg'?'\u2717':'\u25c8';
     t0+='<div class="trait-box '+tr.t+'"><div class="trait-name">'+icon+' '+tr.n+'</div><div class="trait-desc">'+tr.d+'</div></div>';
   }
-  t0+='</div><div class="sec-hdr" style="margin-top:16px">Performance Stats</div>';t0+=radarChart([{name:r.name,color:'#E10600',stats:r.stats}],240);t0+='<div class="stats-wrap">';
+  t0+='</div><div class="sec-hdr" style="margin-top:16px">Performance Stats</div>';
+  t0+='<div style="display:flex;gap:10px;align-items:center">';
+  t0+='<div style="flex:1;min-width:0">';
   for(var i=0;i<keys.length;i++){
     var v=r.stats[keys[i]];
-    t0+='<div class="stat-row" style="border-left-color:'+ac(v)+';gap:10px">'+
-      '<span class="stat-label" style="flex-shrink:0;width:96px">'+lbls[i]+'</span>'+
-      '<span style="flex:1;height:8px;background:#E5E5E5;border-radius:4px;overflow:hidden"><span style="display:block;height:100%;width:'+v+'%;background:'+bg(v)+'"></span></span>'+
-      '<span class="stat-num" style="font-size:20px;color:'+sc(v)+';flex-shrink:0;width:52px;text-align:right">'+v+'%</span>'+
+    t0+='<div style="display:flex;justify-content:space-between;align-items:center;gap:6px;padding:6px 0 6px 8px;border-bottom:1px solid #EEEEEE;border-left:3px solid '+ac(v)+'">'+
+      '<span class="stat-label" style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis">'+lbls[i]+'</span>'+
+      '<span style="font-family:Bebas Neue,sans-serif;font-size:20px;line-height:1;color:'+sc(v)+';flex-shrink:0">'+v+'%</span>'+
       '</div>';
   }
-  t0+='<div class="stat-row" style="border-left-color:'+ac(r.ovr)+';background:rgba(245,197,24,0.06)">'+
+  t0+='<div style="display:flex;justify-content:space-between;align-items:center;gap:6px;padding:7px 8px;margin-top:4px;background:rgba(245,197,24,0.10);border-left:3px solid '+ac(r.ovr)+'">'+
     '<span class="stat-label">Overall</span>'+
-    '<span class="stat-num" style="color:'+sc(r.ovr)+'">'+r.ovr+'</span>'+
-    '<div class="stat-bar-wrap"><div id="bf'+r.id+'-ovr" class="stat-fill" style="background:'+bg(r.ovr)+'"></div></div>'+
-    '</div></div>';
+    '<span style="font-family:Bebas Neue,sans-serif;font-size:22px;line-height:1;color:'+sc(r.ovr)+'">'+r.ovr+'</span>'+
+    '</div>';
+  t0+='</div>';
+  t0+='<div style="flex:1;min-width:0">'+radarChart([{name:r.name,color:'#E10600',stats:r.stats}],220)+'</div>';
+  t0+='</div>';
   t0+=namcVision(r);
 
   // TAB 1: CAREER
