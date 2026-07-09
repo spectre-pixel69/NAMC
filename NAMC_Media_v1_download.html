@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>NAMC — Media</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;600;700;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--red:#E10600;--blue:#0B3D6B;--gold:#F5C518;--black:#0B0B0D;--grey:#5A5F66;--mgrey:#C7C9CC;--lgrey:#EEEEEE;--white:#FFFFFF;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--white);color:var(--black);font-family:'Barlow',sans-serif;}
+.topbar{background:var(--white);border-bottom:1px solid var(--mgrey);padding:12px 20px;position:sticky;top:0;z-index:100;display:flex;align-items:center;gap:16px;}
+.topbar button{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--white);background:var(--red);padding:10px 18px;border:none;cursor:pointer;}
+.topbar button:hover{background:var(--blue);}
+.topbar .wm{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:3px;}
+.topbar .wm span{color:var(--red);}
+.hero{position:relative;min-height:300px;display:flex;align-items:center;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;background:url('https://picsum.photos/seed/namcmedia/1920/900') center/cover;}
+.hero-ov{position:absolute;inset:0;background:linear-gradient(100deg,rgba(11,11,13,0.92) 0%,rgba(11,11,13,0.8) 45%,rgba(11,11,13,0.35) 100%);}
+.hero-in{position:relative;z-index:2;padding:44px 40px;max-width:900px;}
+.eyebrow{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:5px;text-transform:uppercase;color:var(--red);margin-bottom:12px;}
+.hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(44px,7vw,80px);letter-spacing:2px;line-height:0.9;color:var(--white);}
+.hero h1 span{color:var(--red);}
+.hero p{font-family:'Barlow Condensed',sans-serif;font-size:15px;color:var(--mgrey);letter-spacing:1px;margin-top:14px;max-width:640px;}
+.wrap{max-width:1000px;margin:0 auto;padding:48px 24px;}
+.sec-tag{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--red);margin-bottom:8px;}
+h2{font-family:'Bebas Neue',sans-serif;font-size:38px;letter-spacing:2px;margin-bottom:16px;}
+p.body{font-size:15px;line-height:1.6;color:#222;margin-bottom:14px;}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px;}
+th{background:var(--black);color:var(--white);font-family:'Barlow Condensed',sans-serif;letter-spacing:1px;text-transform:uppercase;font-size:12px;padding:10px 12px;text-align:left;}
+td{border-bottom:1px solid var(--lgrey);padding:10px 12px;vertical-align:top;}
+tr:nth-child(even) td{background:#FAFAFA;}
+.assets{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:20px 0;}
+.assets figure{border:2px dashed var(--mgrey);border-radius:8px;overflow:hidden;background:var(--lgrey);}
+.assets img{width:100%;height:160px;object-fit:cover;display:block;}
+.assets figcaption{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--grey);padding:8px;}
+.cta{background:var(--black);color:var(--white);text-align:center;padding:32px 20px;margin-top:32px;}
+.cta h2{color:var(--white);}
+.cta p{font-family:'Barlow Condensed',sans-serif;letter-spacing:1px;}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <button onclick="location.href='NAMC_Website_v6_3.html'">&larr; Back to NAMC</button>
+  <div class="wm">NA<span>MC</span></div>
+</div>
+
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-ov"></div>
+  <div class="hero-in">
+    <div class="eyebrow">Media &amp; Press</div>
+    <h1>NAMC <span>Media Center</span></h1>
+    <p>Credentials, official assets, and press resources for the 2027 inaugural season.</p>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="sec-tag">Press Credentials</div>
+  <h2>Cover The Championship</h2>
+  <p class="body">Accredited media receive access to the Friday press day, the paddock, and post-race availability with riders and team managers. Every NAMC round is a three-day weekend with all 160 riders on site from Friday. <strong>Credential applications for the 2027 season open soon.</strong></p>
+  <table>
+    <tr><th>Credential Tier</th><th>Access</th></tr>
+    <tr><td>Photo / Video</td><td>Trackside media zones, paddock, Friday press day.</td></tr>
+    <tr><td>Written / Editorial</td><td>Press room, post-race availability, media scoreboard feed.</td></tr>
+    <tr><td>Broadcast</td><td>Live radio feed access, designated broadcast positions.</td></tr>
+  </table>
+
+  <div class="sec-tag">Official Assets</div>
+  <h2>Logos, Photos &amp; B-Roll</h2>
+  <p class="body">Approved brand assets follow the NAMC Brand System: flat NAMC wordmark or shield icon only, high contrast, no gradients, no distortion, and no recolor outside the official palette. A downloadable press kit will be linked here.</p>
+  <div class="assets">
+    <figure><img src="https://picsum.photos/seed/media1/600/400" alt=""><figcaption>Image Placeholder — Logo Pack</figcaption></figure>
+    <figure><img src="https://picsum.photos/seed/media2/600/400" alt=""><figcaption>Image Placeholder — Rider Photos</figcaption></figure>
+    <figure><img src="https://picsum.photos/seed/media3/600/400" alt=""><figcaption>Image Placeholder — Action B-Roll</figcaption></figure>
+    <figure><img src="https://picsum.photos/seed/media4/600/400" alt=""><figcaption>Image Placeholder — Track Maps</figcaption></figure>
+  </div>
+
+  <div class="sec-tag">Contact</div>
+  <h2>Official Media Contact</h2>
+  <p class="body">Press inquiries, interview requests, and credential questions &middot; namcmotocross.com. Official contact details will be published here.</p>
+</div>
+
+<div class="cta">
+  <h2>Tell The Story Of The Rising Tide.</h2>
+  <p>Media credentials for 2027 &middot; namcmotocross.com</p>
+</div>
+</body>
+</html>

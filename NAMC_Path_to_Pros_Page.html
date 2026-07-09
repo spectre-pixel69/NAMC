@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>NAMC — Path to Pros</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;600;700;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--red:#E10600;--blue:#0B3D6B;--gold:#F5C518;--grn:#1A7A4A;--black:#0B0B0D;--grey:#5A5F66;--mgrey:#C7C9CC;--lgrey:#EEEEEE;--white:#FFFFFF;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--white);color:var(--black);font-family:'Barlow',sans-serif;}
+.topbar{background:var(--white);border-bottom:1px solid var(--mgrey);padding:12px 20px;position:sticky;top:0;z-index:100;display:flex;align-items:center;gap:16px;}
+.topbar button{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--white);background:var(--red);padding:10px 18px;border:none;cursor:pointer;}
+.topbar button:hover{background:var(--blue);}
+.topbar .wm{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:3px;}
+.topbar .wm span{color:var(--red);}
+.hero{position:relative;min-height:300px;display:flex;align-items:center;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;background:url('https://picsum.photos/seed/namcpphub/1920/900') center/cover;}
+.hero-ov{position:absolute;inset:0;background:linear-gradient(100deg,rgba(11,11,13,0.92) 0%,rgba(11,11,13,0.8) 45%,rgba(11,11,13,0.35) 100%);}
+.hero-in{position:relative;z-index:2;padding:44px 40px;max-width:900px;}
+.eyebrow{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:5px;text-transform:uppercase;color:var(--red);margin-bottom:12px;}
+.hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(44px,7vw,80px);letter-spacing:2px;line-height:0.9;color:var(--white);}
+.hero h1 span{color:var(--red);}
+.hero p{font-family:'Barlow Condensed',sans-serif;font-size:15px;color:var(--mgrey);letter-spacing:1px;margin-top:14px;max-width:640px;}
+.wrap{max-width:1000px;margin:0 auto;padding:48px 24px;}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;}
+.card{border:1px solid var(--mgrey);border-radius:8px;overflow:hidden;cursor:pointer;transition:transform 0.15s,box-shadow 0.15s;}
+.card:hover{transform:translateY(-3px);box-shadow:0 6px 20px rgba(0,0,0,0.1);}
+.card img{width:100%;height:200px;object-fit:cover;display:block;}
+.card .body{padding:20px;}
+.card h3{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:1px;margin-bottom:8px;}
+.card p{font-size:14px;color:var(--grey);line-height:1.5;}
+.card .go{display:inline-block;margin-top:12px;font-family:'Barlow Condensed',sans-serif;font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:12px;color:var(--red);}
+.intro{font-size:16px;line-height:1.6;color:#222;margin-bottom:28px;}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <button onclick="location.href='NAMC_Website_v6_3.html'">&larr; Back to NAMC</button>
+  <div class="wm">NA<span>MC</span></div>
+</div>
+
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-ov"></div>
+  <div class="hero-in">
+    <div class="eyebrow">The NAMC Development Pipeline</div>
+    <h1>Path to <span>Pros</span></h1>
+    <p>A public, merit-based ladder from age 4 to the professional Draft. Five steps. One fair shot for every rider.</p>
+  </div>
+</div>
+
+<div class="wrap">
+  <p class="intro">The NAMC Development pipeline is the fair, transparent path professional motocross never had — five steps, ages 4 through 18, every rider ranked publicly by OVR. Choose your track below.</p>
+  <div class="cards">
+    <div class="card" onclick="location.href='NAMC_Amateur_Path_to_Pros_v2.html'">
+      <img src="https://picsum.photos/seed/pphub1/700/400" alt="">
+      <div class="body">
+        <h3>Development Series</h3>
+        <p>The full 5-step ladder, the OVR rating system, and pre-draft eligibility. Ages 4 to 18 and the road into the NAMC Draft.</p>
+        <span class="go">View Development Series &rsaquo;</span>
+      </div>
+    </div>
+    <div class="card" onclick="location.href='NAMC_Youth_Path_to_Pros_v1_download.html'">
+      <img src="https://picsum.photos/seed/pphub2/700/400" alt="">
+      <div class="body">
+        <h3>Youth Pipeline</h3>
+        <p>The early ladder for families — 50cc beginners through the junior and intermediate ranks, ages 4 to 14.</p>
+        <span class="go">View Youth Pipeline &rsaquo;</span>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

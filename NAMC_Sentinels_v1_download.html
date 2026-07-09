@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>NAMC — The Sentinels</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;600;700;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--red:#E10600;--blue:#0B3D6B;--gold:#F5C518;--black:#0B0B0D;--grey:#5A5F66;--mgrey:#C7C9CC;--lgrey:#EEEEEE;--white:#FFFFFF;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--white);color:var(--black);font-family:'Barlow',sans-serif;}
+.topbar{background:var(--white);border-bottom:1px solid var(--mgrey);padding:12px 20px;position:sticky;top:0;z-index:100;display:flex;align-items:center;gap:16px;}
+.topbar button{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--white);background:var(--red);padding:10px 18px;border:none;cursor:pointer;}
+.topbar button:hover{background:var(--blue);}
+.topbar .wm{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:3px;}
+.topbar .wm span{color:var(--red);}
+.hero{position:relative;min-height:320px;display:flex;align-items:center;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;background:url('https://picsum.photos/seed/namcsentinel/1920/900') center/cover;}
+.hero-ov{position:absolute;inset:0;background:linear-gradient(100deg,rgba(11,11,13,0.92) 0%,rgba(11,11,13,0.8) 45%,rgba(11,11,13,0.35) 100%);}
+.hero-in{position:relative;z-index:2;padding:48px 40px;max-width:900px;}
+.eyebrow{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:5px;text-transform:uppercase;color:var(--red);margin-bottom:12px;}
+.hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(48px,8vw,88px);letter-spacing:2px;line-height:0.9;color:var(--white);}
+.hero h1 span{color:var(--red);}
+.hero p{font-family:'Barlow Condensed',sans-serif;font-size:15px;color:var(--mgrey);letter-spacing:1px;margin-top:14px;max-width:620px;}
+.wrap{max-width:1000px;margin:0 auto;padding:48px 24px;}
+.sec-tag{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--red);margin-bottom:8px;}
+h2{font-family:'Bebas Neue',sans-serif;font-size:40px;letter-spacing:2px;margin-bottom:16px;}
+h3{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:700;letter-spacing:1px;margin:24px 0 8px;text-transform:uppercase;}
+p.body{font-size:15px;line-height:1.6;color:#222;margin-bottom:14px;}
+.quote{border-left:4px solid var(--red);padding:12px 20px;font-style:italic;font-size:18px;color:var(--grey);margin:20px 0;}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px;}
+th{background:var(--black);color:var(--white);font-family:'Barlow Condensed',sans-serif;letter-spacing:1px;text-transform:uppercase;font-size:12px;padding:10px 12px;text-align:left;}
+td{border-bottom:1px solid var(--lgrey);padding:10px 12px;vertical-align:top;}
+tr:nth-child(even) td{background:#FAFAFA;}
+.rule-flag{background:#FFECEC;border-left:4px solid var(--red);color:#7a0000;font-size:13px;line-height:1.5;text-align:left;padding:12px 16px;margin:16px 0;border-radius:4px;}
+.rule-flag b{color:var(--red);text-transform:uppercase;letter-spacing:1px;font-size:11px;font-family:'Barlow Condensed',sans-serif;display:block;margin-bottom:4px;}
+.imgrow{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:20px 0;}
+.imgrow figure{border:2px dashed var(--mgrey);border-radius:8px;overflow:hidden;background:var(--lgrey);}
+.imgrow img{width:100%;height:180px;object-fit:cover;display:block;}
+.imgrow figcaption{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--grey);padding:8px;}
+.cta{background:var(--red);color:var(--white);text-align:center;padding:32px 20px;margin-top:32px;}
+.cta h2{color:var(--white);}
+.cta p{font-family:'Barlow Condensed',sans-serif;letter-spacing:1px;}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <button onclick="location.href='NAMC_Website_v6_3.html'">&larr; Back to NAMC</button>
+  <div class="wm">NA<span>MC</span></div>
+</div>
+
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-ov"></div>
+  <div class="hero-in">
+    <div class="eyebrow">NAMC Official Safety Corps</div>
+    <h1>The <span>Sentinels</span></h1>
+    <p>The first professional officiating corps in the history of motocross. Trained and certified by the CVMA. Answerable only to the rulebook.</p>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="quote">"For the first time in the history of professional motocross, the people who protect the sport are protected by it."</div>
+
+  <div class="sec-tag">What The Sentinels Are</div>
+  <h2>Not Volunteers. Professionals.</h2>
+  <p class="body">Every Sentinel is hired directly by the NAMC — not a volunteer, not a freelancer. A full-time league employee with a contract, a salary, and benefits. Trained and certified by the CVMA. Neutral to every team, every manufacturer, every rider.</p>
+
+  <div class="imgrow">
+    <figure><img src="https://picsum.photos/seed/sent1/600/400" alt=""><figcaption>Image Placeholder — Corner Sentinel</figcaption></figure>
+    <figure><img src="https://picsum.photos/seed/sent2/600/400" alt=""><figcaption>Image Placeholder — Start Gate</figcaption></figure>
+    <figure><img src="https://picsum.photos/seed/sent3/600/400" alt=""><figcaption>Image Placeholder — Incident Response</figcaption></figure>
+  </div>
+
+  <div class="sec-tag">Authority Structure</div>
+  <h2>Chain of Command</h2>
+  <p class="body">The Chief Sentinel commands the combined 24-member corps and holds supreme, final authority on all on-track determinations, safety calls, and immediate race-day rulings. Chief Sentinel decisions are final and cannot be overridden mid-event. Post-event appeals are directed to the Court of Appeal.</p>
+
+  <h3>The 24-Member Corps — 12 + 12 Model</h3>
+  <p class="body">Per rulebook 1.8, the Sentinel officiating corps is a 24-member unit: <strong>12 Traveling Sentinels</strong> (deployed to every round for uniform enforcement across the USA, Canada, and Mexico) and <strong>12 Local Sentinels</strong> (site-specific venue experts integrated at each round).</p>
+
+  <table>
+    <tr><th>Position</th><th>Responsibility</th><th>Certification</th></tr>
+    <tr><td>Chief Sentinel</td><td>Head of officiating corps per event. Final authority on all on-track safety rulings.</td><td>CVMA Level 1</td></tr>
+    <tr><td>Corner Sentinel</td><td>Flag communication, incident response, track condition reporting.</td><td>CVMA Certified</td></tr>
+    <tr><td>Start Gate Sentinel</td><td>Controls starting gate system, monitors rider alignment, communicates false starts.</td><td>CVMA Certified</td></tr>
+    <tr><td>Incident Response Sentinel</td><td>Trained first responders at high-risk sections. Downed rider protocol.</td><td>CVMA Level 1</td></tr>
+    <tr><td>Finish Line Sentinel</td><td>Controls finish line timing, monitors last-lap positioning.</td><td>CVMA Certified</td></tr>
+    <tr><td>Paddock Marshal</td><td>Monitors paddock safety zones, controls hot pit access.</td><td>CVMA Certified</td></tr>
+  </table>
+
+  <div class="sec-tag">Compensation &amp; Conditions</div>
+  <h2>Guard The Sport. Get Guarded Back.</h2>
+  <table>
+    <tr><th>Benefit</th><th>NAMC Sentinel Program</th><th>Current System</th></tr>
+    <tr><td>Employment status</td><td>Full league employee</td><td>Volunteer or day-rate freelance</td></tr>
+    <tr><td>Guaranteed income</td><td>Annual contract</td><td>Per-event only — no guarantee</td></tr>
+    <tr><td>Training &amp; certification</td><td>CVMA certified — paid training</td><td>Self-funded or none</td></tr>
+    <tr><td>Travel &amp; accommodation</td><td>Covered by NAMC for all rounds</td><td>Self-funded</td></tr>
+    <tr><td>Injury protection</td><td>Full coverage — league policy</td><td>None</td></tr>
+    <tr><td>Career advancement</td><td>Chief Sentinel track — merit-based</td><td>No path</td></tr>
+  </table>
+  <p class="body">The Sentinel corps is deployed across all <strong>20 rounds</strong> of the championship on annual league contracts.</p>
+</div>
+
+<div class="cta">
+  <h2>Guard The Sport. The First Of Your Kind.</h2>
+  <p>Sentinel applications open July 1, 2026 &middot; The best of this sport.</p>
+</div>
+</body>
+</html>

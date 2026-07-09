@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>NAMC — About</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;600;700;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--red:#E10600;--blue:#0B3D6B;--gold:#F5C518;--black:#0B0B0D;--grey:#5A5F66;--mgrey:#C7C9CC;--lgrey:#EEEEEE;--white:#FFFFFF;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--white);color:var(--black);font-family:'Barlow',sans-serif;}
+.topbar{background:var(--white);border-bottom:1px solid var(--mgrey);padding:12px 20px;position:sticky;top:0;z-index:100;display:flex;align-items:center;gap:16px;}
+.topbar button{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--white);background:var(--red);padding:10px 18px;border:none;cursor:pointer;}
+.topbar button:hover{background:var(--blue);}
+.topbar .wm{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:3px;}
+.topbar .wm span{color:var(--red);}
+.hero{position:relative;min-height:300px;display:flex;align-items:center;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;background:url('https://picsum.photos/seed/namcabout/1920/900') center/cover;}
+.hero-ov{position:absolute;inset:0;background:linear-gradient(100deg,rgba(11,11,13,0.92) 0%,rgba(11,11,13,0.8) 45%,rgba(11,11,13,0.35) 100%);}
+.hero-in{position:relative;z-index:2;padding:44px 40px;max-width:900px;}
+.eyebrow{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:5px;text-transform:uppercase;color:var(--red);margin-bottom:12px;}
+.hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(44px,7vw,80px);letter-spacing:2px;line-height:0.9;color:var(--white);}
+.hero h1 span{color:var(--red);}
+.hero p{font-family:'Barlow Condensed',sans-serif;font-size:15px;color:var(--mgrey);letter-spacing:1px;margin-top:14px;max-width:640px;}
+.wrap{max-width:1000px;margin:0 auto;padding:48px 24px;}
+.sec-tag{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--red);margin-bottom:8px;}
+h2{font-family:'Bebas Neue',sans-serif;font-size:38px;letter-spacing:2px;margin-bottom:16px;}
+p.body{font-size:15px;line-height:1.6;color:#222;margin-bottom:14px;}
+.tagline{font-family:'Bebas Neue',sans-serif;font-size:44px;letter-spacing:3px;color:var(--red);text-align:center;margin:10px 0 30px;}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px;}
+th{background:var(--black);color:var(--white);font-family:'Barlow Condensed',sans-serif;letter-spacing:1px;text-transform:uppercase;font-size:12px;padding:10px 12px;text-align:left;}
+td{border-bottom:1px solid var(--lgrey);padding:10px 12px;vertical-align:top;}
+tr:nth-child(even) td{background:#FAFAFA;}
+.pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:20px 0;}
+.pillar{border-top:3px solid var(--red);background:#FAFAFA;padding:18px;}
+.pillar h3{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px;}
+.pillar p{font-size:13px;color:var(--grey);line-height:1.5;}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <button onclick="location.href='NAMC_Website_v6_3.html'">&larr; Back to NAMC</button>
+  <div class="wm">NA<span>MC</span></div>
+</div>
+
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-ov"></div>
+  <div class="hero-in">
+    <div class="eyebrow">About The League</div>
+    <h1>The North American <span>Motocross Championship</span></h1>
+    <p>A rider-first professional motorsport league built on fairness, athlete compensation, and a fair shot for every competitor.</p>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="tagline">"THE RISING TIDE"</div>
+
+  <div class="sec-tag">Who We Are</div>
+  <h2>Built To Finish What The Sport Started</h2>
+  <p class="body">The North American Motocross Championship (NAMC) is a rider-first professional motorsport league — structured, premium, and disruptive. No rider pays to race. Compensation is guaranteed, transparent, and paid on time — always within 24 hours of Sunday's final Main Event. The league is sanctioned by the <strong>Chuckwalla Valley Motorcycle Association (CVMA)</strong> and operates under full CVMA safety and technical charters.</p>
+
+  <div class="pillars">
+    <div class="pillar"><h3>Rider-First</h3><p>$0 entry fees for contracted professionals. Guaranteed salaries. Paid within 24 hours of the final Main Event.</p></div>
+    <div class="pillar"><h3>Merit-Based</h3><p>A fair, transparent, public draft. Every rider earns their seat — no factory handouts.</p></div>
+    <div class="pillar"><h3>Fan-First</h3><p>Free tickets in 2027. Full paddock access. The most affordable ticket in professional motorsports.</p></div>
+    <div class="pillar"><h3>Fair Play</h3><p>Professional officiating from the Sentinel corps. An 18-year hard age floor. No exceptions, ever.</p></div>
+  </div>
+
+  <div class="sec-tag">The Facts</div>
+  <h2>The 2027 Inaugural Season</h2>
+  <table>
+    <tr><th>Item</th><th>Detail</th></tr>
+    <tr><td>League Name</td><td>North American Motocross Championship (NAMC)</td></tr>
+    <tr><td>Tagline</td><td>The Rising Tide</td></tr>
+    <tr><td>Sanctioning Body</td><td>CVMA — Chuckwalla Valley Motorcycle Association</td></tr>
+    <tr><td>Established</td><td>EST. 2023</td></tr>
+    <tr><td>Gates Drop</td><td>January 8, 2027 — San Diego, California</td></tr>
+    <tr><td>Season Opener</td><td>Round 1 — March 27, 2027 — Fox Raceway, Pala CA</td></tr>
+    <tr><td>Championship</td><td>One S4 Four-Stroke Championship — 350 Pro / 250 / 250P / Women's 250, plus the Manufacturer's Cup</td></tr>
+    <tr><td>Charters</td><td>20 (hard cap) — target 10 Manufacturer + 10 Independent Team</td></tr>
+    <tr><td>Riders On The Gate</td><td>160 (20 charters &times; 8 active)</td></tr>
+    <tr><td>Rounds</td><td>20 race weekends</td></tr>
+    <tr><td>Home Base</td><td>Chuckwalla and Pala — Southern California</td></tr>
+    <tr><td>Governing Law</td><td>State of California</td></tr>
+  </table>
+</div>
+</body>
+</html>

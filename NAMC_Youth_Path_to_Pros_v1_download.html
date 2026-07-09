@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>NAMC — Youth Path to Pros</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;600;700;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--red:#E10600;--blue:#0B3D6B;--gold:#F5C518;--grn:#1A7A4A;--black:#0B0B0D;--grey:#5A5F66;--mgrey:#C7C9CC;--lgrey:#EEEEEE;--white:#FFFFFF;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--white);color:var(--black);font-family:'Barlow',sans-serif;}
+.topbar{background:var(--white);border-bottom:1px solid var(--mgrey);padding:12px 20px;position:sticky;top:0;z-index:100;display:flex;align-items:center;gap:16px;}
+.topbar button{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--white);background:var(--red);padding:10px 18px;border:none;cursor:pointer;}
+.topbar button:hover{background:var(--blue);}
+.topbar .wm{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:3px;}
+.topbar .wm span{color:var(--red);}
+.hero{position:relative;min-height:300px;display:flex;align-items:center;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;background:url('https://picsum.photos/seed/namcyouthhero/1920/900') center/cover;}
+.hero-ov{position:absolute;inset:0;background:linear-gradient(100deg,rgba(11,11,13,0.92) 0%,rgba(11,11,13,0.8) 45%,rgba(11,11,13,0.35) 100%);}
+.hero-in{position:relative;z-index:2;padding:44px 40px;max-width:900px;}
+.eyebrow{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:5px;text-transform:uppercase;color:var(--red);margin-bottom:12px;}
+.hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(44px,7vw,80px);letter-spacing:2px;line-height:0.9;color:var(--white);}
+.hero h1 span{color:var(--red);}
+.hero p{font-family:'Barlow Condensed',sans-serif;font-size:15px;color:var(--mgrey);letter-spacing:1px;margin-top:14px;max-width:640px;}
+.wrap{max-width:1000px;margin:0 auto;padding:48px 24px;}
+.sec-tag{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--red);margin-bottom:8px;}
+h2{font-family:'Bebas Neue',sans-serif;font-size:38px;letter-spacing:2px;margin-bottom:16px;}
+p.body{font-size:15px;line-height:1.6;color:#222;margin-bottom:14px;}
+.step{border-left:4px solid var(--grn);background:#F7FBF8;padding:16px 20px;margin:14px 0;border-radius:0 6px 6px 0;}
+.step h3{font-family:'Bebas Neue',sans-serif;font-size:24px;letter-spacing:1px;color:var(--grn);margin-bottom:4px;}
+.step .age{font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--grey);margin-bottom:8px;}
+.step ul{margin-left:18px;font-size:14px;line-height:1.6;}
+.floor{background:var(--red);color:var(--white);text-align:center;padding:20px;margin:20px 0;font-family:'Bebas Neue',sans-serif;font-size:24px;letter-spacing:2px;}
+.imgrow{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:20px 0;}
+.imgrow figure{border:2px dashed var(--mgrey);border-radius:8px;overflow:hidden;background:var(--lgrey);}
+.imgrow img{width:100%;height:180px;object-fit:cover;display:block;}
+.imgrow figcaption{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--grey);padding:8px;}
+.cta{background:var(--grn);color:var(--white);text-align:center;padding:32px 20px;margin-top:32px;}
+.cta h2{color:var(--white);}
+.cta p{font-family:'Barlow Condensed',sans-serif;letter-spacing:1px;}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <button onclick="location.href='NAMC_Website_v6_3.html'">&larr; Back to NAMC</button>
+  <div class="wm">NA<span>MC</span></div>
+</div>
+
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-ov"></div>
+  <div class="hero-in">
+    <div class="eyebrow">To Every Family In Amateur Motocross</div>
+    <h1>Youth <span>Path to Pros</span></h1>
+    <p>It starts at age 4. A public, trackable, merit-based pipeline built for your kid — from the first 50cc gate drop to draft eligibility.</p>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="sec-tag">The Early Ladder</div>
+  <h2>Where Every NAMC Career Begins</h2>
+  <p class="body">The youth pipeline covers the foundational steps of the NAMC Development ladder — building bike control, safety, and competition experience long before a rider is old enough for the professional Draft.</p>
+
+  <div class="imgrow">
+    <figure><img src="https://picsum.photos/seed/youth1/600/400" alt=""><figcaption>Image Placeholder — 50cc Peewee</figcaption></figure>
+    <figure><img src="https://picsum.photos/seed/youth2/600/400" alt=""><figcaption>Image Placeholder — Junior Class</figcaption></figure>
+    <figure><img src="https://picsum.photos/seed/youth3/600/400" alt=""><figcaption>Image Placeholder — Family Paddock</figcaption></figure>
+  </div>
+
+  <div class="step">
+    <h3>Step 1 — Beginner</h3>
+    <div class="age">Ages 4&ndash;7 &middot; 50cc</div>
+    <ul>
+      <li>Entry point for all riders. Peewee and Mini classes.</li>
+      <li>Focus: bike control, safety, track awareness. No OVR rating yet.</li>
+      <li>Development Series registration available from age 4 — family creates a public rider profile.</li>
+    </ul>
+  </div>
+  <div class="step">
+    <h3>Step 2 — Junior</h3>
+    <div class="age">Ages 8&ndash;11 &middot; 65cc / 85cc</div>
+    <ul>
+      <li>Structured regional competition begins.</li>
+      <li>OVR rating assigned at age 9. Updates every 60 days.</li>
+      <li>Results tracked toward the national OVR leaderboard.</li>
+    </ul>
+  </div>
+  <div class="step">
+    <h3>Step 3 — Intermediate</h3>
+    <div class="age">Ages 12&ndash;14 &middot; 85cc / 112cc / 150cc</div>
+    <ul>
+      <li>Regional and national competition.</li>
+      <li>OVR updates every 30 days. Scouts begin tracking riders.</li>
+      <li>Top 100 OVR-ranked riders per age class published on namcmotocross.com.</li>
+    </ul>
+  </div>
+
+  <p class="body">Steps 4 (Advanced, 15&ndash;17) and 5 (NAMC Development Series, 17&ndash;18) complete the ladder into the Draft. See the full <a href="NAMC_Amateur_Path_to_Pros_v2.html" style="color:var(--red);font-weight:700;">Path to Pros development page</a> for the complete pipeline and OVR system.</p>
+
+  <div class="floor">18-YEAR AGE FLOOR — NO EXCEPTIONS. EVER.</div>
+  <p class="body">Any rider who has not reached 18 cannot enter the NAMC Draft or sign a professional contract under any circumstances. They race the Development Series until they are of age. <strong>Registration opens July 1, 2026 at namcmotocross.com.</strong></p>
+</div>
+
+<div class="cta">
+  <h2>Your Kid Deserves A Fair Shot. Now They Have One.</h2>
+  <p>Registration opens July 1, 2026 &middot; namcmotocross.com</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>NAMC — For The Fans</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;600;700;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--red:#E10600;--blue:#0B3D6B;--gold:#F5C518;--black:#0B0B0D;--grey:#5A5F66;--mgrey:#C7C9CC;--lgrey:#EEEEEE;--white:#FFFFFF;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--white);color:var(--black);font-family:'Barlow',sans-serif;}
+.topbar{background:var(--white);border-bottom:1px solid var(--mgrey);padding:12px 20px;position:sticky;top:0;z-index:100;display:flex;align-items:center;gap:16px;}
+.topbar button{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--white);background:var(--red);padding:10px 18px;border:none;cursor:pointer;}
+.topbar button:hover{background:var(--blue);}
+.topbar .wm{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:3px;}
+.topbar .wm span{color:var(--red);}
+.hero{position:relative;min-height:320px;display:flex;align-items:center;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;background:url('https://picsum.photos/seed/namcfanhero/1920/900') center/cover;}
+.hero-ov{position:absolute;inset:0;background:linear-gradient(100deg,rgba(11,11,13,0.92) 0%,rgba(11,11,13,0.8) 45%,rgba(11,11,13,0.35) 100%);}
+.hero-in{position:relative;z-index:2;padding:48px 40px;max-width:900px;}
+.eyebrow{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:5px;text-transform:uppercase;color:var(--red);margin-bottom:12px;}
+.hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(48px,8vw,88px);letter-spacing:2px;line-height:0.9;color:var(--white);}
+.hero h1 span{color:var(--red);}
+.hero p{font-family:'Barlow Condensed',sans-serif;font-size:15px;color:var(--mgrey);letter-spacing:1px;margin-top:14px;max-width:640px;}
+.wrap{max-width:1000px;margin:0 auto;padding:48px 24px;}
+.sec-tag{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--red);margin-bottom:8px;}
+h2{font-family:'Bebas Neue',sans-serif;font-size:40px;letter-spacing:2px;margin-bottom:16px;}
+p.body{font-size:15px;line-height:1.6;color:#222;margin-bottom:14px;}
+.quote{border-left:4px solid var(--red);padding:12px 20px;font-style:italic;font-size:18px;color:var(--grey);margin:20px 0;}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px;}
+th{background:var(--black);color:var(--white);font-family:'Barlow Condensed',sans-serif;letter-spacing:1px;text-transform:uppercase;font-size:12px;padding:10px 12px;text-align:left;}
+td{border-bottom:1px solid var(--lgrey);padding:10px 12px;vertical-align:top;}
+tr:nth-child(even) td{background:#FAFAFA;}
+.imgrow{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:20px 0;}
+.imgrow figure{border:2px dashed var(--mgrey);border-radius:8px;overflow:hidden;background:var(--lgrey);}
+.imgrow img{width:100%;height:180px;object-fit:cover;display:block;}
+.imgrow figcaption{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--grey);padding:8px;}
+.big{background:var(--gold);color:var(--black);text-align:center;padding:24px;margin:20px 0;font-family:'Bebas Neue',sans-serif;font-size:32px;letter-spacing:2px;}
+.cta{background:var(--red);color:var(--white);text-align:center;padding:32px 20px;margin-top:32px;}
+.cta h2{color:var(--white);}
+.cta p{font-family:'Barlow Condensed',sans-serif;letter-spacing:1px;}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <button onclick="location.href='NAMC_Website_v6_3.html'">&larr; Back to NAMC</button>
+  <div class="wm">NA<span>MC</span></div>
+</div>
+
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-ov"></div>
+  <div class="hero-in">
+    <div class="eyebrow">To Every Fan</div>
+    <h1>The Sport Finally <span>Loves You Back</span></h1>
+    <p>You kept showing up. You bought the tickets. You brought your kids. Now it's our turn to show up for you. Gate drops January 8, 2027 &middot; San Diego, California.</p>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="quote">"You gave this sport everything it asked for. Now it's our turn to show up for you."</div>
+
+  <div class="sec-tag">Ticket Pricing</div>
+  <h2>Built For Families, Not Profit Margins</h2>
+  <table>
+    <tr><th>Season</th><th>Adult</th><th>Minor (Under 18)</th><th>Paddock Access</th><th>Notes</th></tr>
+    <tr><td>2027 &mdash; Inaugural</td><td>FREE</td><td>FREE</td><td>Included</td><td>Every event. Every round. No exceptions.</td></tr>
+    <tr><td>2028 and Beyond</td><td>$10</td><td>$5</td><td>Included</td><td>The most affordable ticket in professional motorsports.</td></tr>
+  </table>
+  <div class="big">A FAMILY OF FOUR ATTENDS EVERY 2027 ROUND FOR $0.</div>
+
+  <div class="imgrow">
+    <figure><img src="https://picsum.photos/seed/fan1/600/400" alt=""><figcaption>Image Placeholder — Grandstands</figcaption></figure>
+    <figure><img src="https://picsum.photos/seed/fan2/600/400" alt=""><figcaption>Image Placeholder — Paddock Walk</figcaption></figure>
+    <figure><img src="https://picsum.photos/seed/fan3/600/400" alt=""><figcaption>Image Placeholder — Autograph Session</figcaption></figure>
+  </div>
+
+  <div class="sec-tag">The Fan Experience</div>
+  <h2>Access, Not Upsells</h2>
+  <table>
+    <tr><th>Experience</th><th>What It Means For You</th></tr>
+    <tr><td>General Paddock Access</td><td>Walk the paddock. See the bikes up close. Included with every ticket.</td></tr>
+    <tr><td>Rider Autograph Sessions</td><td>Every NAMC rider participates. No VIP package required.</td></tr>
+    <tr><td>Fan Q&amp;A Zone</td><td>Riders come to you. Ask your questions directly.</td></tr>
+    <tr><td>Live Radio Broadcast</td><td>Rider-to-pit radio calls broadcast live at the venue.</td></tr>
+    <tr><td>Transparent Scoreboard</td><td>Live lap times, sector splits, and standings at every event and on the NAMC app.</td></tr>
+    <tr><td>A Three-Day Weekend</td><td>Friday practice &amp; press, Saturday 250P and Women's racing, Sunday showcase finals.</td></tr>
+  </table>
+
+  <div class="sec-tag">One Championship, Four Cups</div>
+  <h2>Four Rider's Cups + The Manufacturer's Cup</h2>
+  <p class="body">Four individual class champions are crowned each season — the <strong>350 Pro</strong>, <strong>250</strong>, <strong>250P</strong>, and <strong>Women's 250</strong> Rider's Cups (equal pay, full championship) — and every team competes all season for the <strong>Manufacturer's Cup</strong>, the biggest trophy in the sport.</p>
+</div>
+
+<div class="cta">
+  <h2>Be On It. January 8, 2027.</h2>
+  <p>San Diego, California &middot; The Rising Tide lifts everyone.</p>
+</div>
+</body>
+</html>

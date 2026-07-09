@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>NAMC — Rider Information</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;600;700;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--red:#E10600;--blue:#0B3D6B;--gold:#F5C518;--black:#0B0B0D;--grey:#5A5F66;--mgrey:#C7C9CC;--lgrey:#EEEEEE;--white:#FFFFFF;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--white);color:var(--black);font-family:'Barlow',sans-serif;}
+.topbar{background:var(--white);border-bottom:1px solid var(--mgrey);padding:12px 20px;position:sticky;top:0;z-index:100;display:flex;align-items:center;gap:16px;}
+.topbar button{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--white);background:var(--red);padding:10px 18px;border:none;cursor:pointer;}
+.topbar button:hover{background:var(--blue);}
+.topbar .wm{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:3px;}
+.topbar .wm span{color:var(--red);}
+.hero{position:relative;min-height:320px;display:flex;align-items:center;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;background:url('https://picsum.photos/seed/namcriderhero/1920/900') center/cover;}
+.hero-ov{position:absolute;inset:0;background:linear-gradient(100deg,rgba(11,11,13,0.92) 0%,rgba(11,11,13,0.8) 45%,rgba(11,11,13,0.35) 100%);}
+.hero-in{position:relative;z-index:2;padding:48px 40px;max-width:900px;}
+.eyebrow{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:5px;text-transform:uppercase;color:var(--red);margin-bottom:12px;}
+.hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(48px,8vw,88px);letter-spacing:2px;line-height:0.9;color:var(--white);}
+.hero h1 span{color:var(--red);}
+.hero p{font-family:'Barlow Condensed',sans-serif;font-size:15px;color:var(--mgrey);letter-spacing:1px;margin-top:14px;max-width:640px;}
+.wrap{max-width:1000px;margin:0 auto;padding:48px 24px;}
+.sec-tag{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--red);margin-bottom:8px;}
+h2{font-family:'Bebas Neue',sans-serif;font-size:40px;letter-spacing:2px;margin-bottom:16px;}
+h3{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:700;letter-spacing:1px;margin:24px 0 8px;text-transform:uppercase;}
+p.body{font-size:15px;line-height:1.6;color:#222;margin-bottom:14px;}
+.quote{border-left:4px solid var(--red);padding:12px 20px;font-style:italic;font-size:18px;color:var(--grey);margin:20px 0;}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px;}
+th{background:var(--black);color:var(--white);font-family:'Barlow Condensed',sans-serif;letter-spacing:1px;text-transform:uppercase;font-size:12px;padding:10px 12px;text-align:left;}
+td{border-bottom:1px solid var(--lgrey);padding:10px 12px;vertical-align:top;}
+tr:nth-child(even) td{background:#FAFAFA;}
+.rule-flag{background:#FFECEC;border-left:4px solid var(--red);color:#7a0000;font-size:13px;line-height:1.5;text-align:left;padding:12px 16px;margin:16px 0;border-radius:4px;}
+.rule-flag b{color:var(--red);text-transform:uppercase;letter-spacing:1px;font-size:11px;font-family:'Barlow Condensed',sans-serif;display:block;margin-bottom:4px;}
+.imgrow{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:20px 0;}
+.imgrow figure{border:2px dashed var(--mgrey);border-radius:8px;overflow:hidden;background:var(--lgrey);}
+.imgrow img{width:100%;height:180px;object-fit:cover;display:block;}
+.imgrow figcaption{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--grey);padding:8px;}
+.cta{background:var(--red);color:var(--white);text-align:center;padding:32px 20px;margin-top:32px;}
+.cta h2{color:var(--white);}
+.cta p{font-family:'Barlow Condensed',sans-serif;letter-spacing:1px;}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <button onclick="location.href='NAMC_Website_v6_3.html'">&larr; Back to NAMC</button>
+  <div class="wm">NA<span>MC</span></div>
+</div>
+
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-ov"></div>
+  <div class="hero-in">
+    <div class="eyebrow">To Every Professional Rider</div>
+    <h1>Rider <span>Information</span></h1>
+    <p>You are the reason anyone buys a ticket. The NAMC was built around that truth — not around the promoter's margin.</p>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="quote">"You train harder than any athlete in professional sports for a system that paid first place $14,000 and fortieth place nothing. That is not a professional sport. The NAMC ends it."</div>
+
+  <div class="sec-tag">What You Earn</div>
+  <h2>Guaranteed. Transparent. On Time.</h2>
+  <table>
+    <tr><th>Class</th><th>Min Annual Salary</th><th>Appearance Fee</th><th>Season Total</th><th>1st Place Race</th></tr>
+    <tr><td>350 Pro</td><td>$400,000</td><td>$1,000 &times; 20</td><td>$420,000+</td><td>$75,000</td></tr>
+    <tr><td>250</td><td>$200,000</td><td>$1,000 &times; 20</td><td>$220,000+</td><td>$40,000</td></tr>
+    <tr><td>250P</td><td>$100,000</td><td>$1,000 &times; 20</td><td>$120,000+</td><td>$20,000</td></tr>
+    <tr><td>Women's 250</td><td>$100,000</td><td>$1,000 &times; 20</td><td>$120,000+</td><td>$20,000</td></tr>
+    <tr><td>Bench Rider</td><td>$50,000 retainer</td><td>$1,000 (active)</td><td>&mdash;</td><td>&mdash;</td></tr>
+  </table>
+  <p class="body"><strong>Appearance fee: $1,000 &times; 20 rounds = $20,000.</strong> <strong>Pro Debut Bonus: $25,000</strong> — paid within 5 business days of signing to first-time professionals, no performance conditions. <strong>Season-ending injury:</strong> full remaining contract paid within 10 business days. No rider is ever abandoned. <strong>40th place minimum: $5,000 per race.</strong></p>
+
+  <div class="imgrow">
+    <figure><img src="https://picsum.photos/seed/rider1/600/400" alt=""><figcaption>Image Placeholder — Starting Gate</figcaption></figure>
+    <figure><img src="https://picsum.photos/seed/rider2/600/400" alt=""><figcaption>Image Placeholder — Podium</figcaption></figure>
+    <figure><img src="https://picsum.photos/seed/rider3/600/400" alt=""><figcaption>Image Placeholder — Rider Portrait</figcaption></figure>
+  </div>
+
+  <div class="sec-tag">The Draft</div>
+  <h2>Your Path To The NAMC</h2>
+  <p class="body"><strong>Draft Day: To Be Announced — Los Angeles, California.</strong> The Free Agent Pool opens the day after Draft Day. Every rider not selected automatically enters the Free Agent Pool, and charter teams may sign Free Agents directly through roster lock, four weeks before Round 1. Your OVR rating is public. Your resume is your credential.</p>
+
+  <h3>Inaugural Talent Exception — Years 1&ndash;3</h3>
+  <p class="body">Athletes exactly 18 years of age with verifiable, elite-level global racing resumes may bypass the Draft and enter as Free Agents. This exception expires permanently at the end of Year 3. <strong>Year 4 forward, the Draft is the only door.</strong></p>
+
+  <div class="sec-tag">Eligibility</div>
+  <h2>18-Year Hard Floor</h2>
+  <p class="body">The minimum age for any NAMC professional is <strong>18 years as of January 8, 2027</strong>. This is absolute. No exceptions. No developmental exemptions. Ever.</p>
+
+  <div class="sec-tag">The Difference</div>
+  <h2>Current System vs. NAMC</h2>
+  <table>
+    <tr><th>What The Rider Sees</th><th>Current System</th><th>NAMC</th></tr>
+    <tr><td>Winner of the main event</td><td>~$14,000</td><td>$75,000</td></tr>
+    <tr><td>Guaranteed annual salary</td><td>$0</td><td>$400,000 minimum (Pro)</td></tr>
+    <tr><td>Appearance fee</td><td>$0</td><td>$1,000 per round</td></tr>
+    <tr><td>Season-ending injury</td><td>$0</td><td>Full contract paid — no rider abandoned</td></tr>
+    <tr><td>40th place finish</td><td>$0</td><td>$5,000 minimum</td></tr>
+    <tr><td>Pro Debut Bonus</td><td>$0</td><td>$25,000 (first-time pros)</td></tr>
+    <tr><td>Entry fee</td><td>$280+</td><td>$0</td></tr>
+  </table>
+</div>
+
+<div class="cta">
+  <h2>This Is What You Were Always Worth.</h2>
+  <p>The first series in professional motocross history built to pay you what this sport owes you.</p>
+</div>
+</body>
+</html>
