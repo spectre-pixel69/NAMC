@@ -7,7 +7,7 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@300;400;500&family=Share+Tech+Mono&display=swap');
 :root{
-  --red:#E8341A;--blue:#1565C0;--gold:#F5C518;
+  --red:#E10600;--blue:#0B3D6B;--gold:#F5C518;
   --bg:#0D1E35;--nav:#081628;--row:#0F2340;--row2:#122848;
   --bdr:#1E4060;--grn:#00D26A;--amb:#F5A623;
   --mn:'Share Tech Mono',monospace;
@@ -58,13 +58,13 @@ html,body{background:var(--bg);color:#fff;font-family:'Barlow',sans-serif;overfl
 .f-search::before{content:'⌕';position:absolute;left:8px;top:50%;transform:translateY(-50%);color:rgba(255,255,255,0.3);font-size:14px;pointer-events:none;}
 
 /* LIST HEADER */
-.list-hdr{display:grid;grid-template-columns:36px 1fr 64px 44px 80px;padding:8px 14px;background:rgba(0,0,0,0.4);border-bottom:1px solid var(--bdr);position:sticky;top:48px;z-index:100;}
+.list-hdr{display:grid;grid-template-columns:36px 44px 1fr 64px 44px 80px;padding:8px 14px;background:rgba(0,0,0,0.4);border-bottom:1px solid var(--bdr);position:sticky;top:48px;z-index:100;}
 .lh{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.22);}
 .lh.c{text-align:center;}
 
 /* RIDER ROWS — tall, name never truncates */
 #rlist{padding-bottom:80px;}
-.rrow{display:grid;grid-template-columns:36px 1fr 64px 44px 80px;padding:0 14px;min-height:72px;border-bottom:1px solid rgba(255,255,255,0.06);align-items:center;background:var(--row);position:relative;}
+.rrow{display:grid;grid-template-columns:36px 44px 1fr 64px 44px 80px;padding:0 14px;min-height:72px;border-bottom:1px solid rgba(255,255,255,0.06);align-items:center;background:var(--row);position:relative;}
 .rrow:nth-child(even){background:var(--row2);}
 .rrow:active{background:rgba(245,197,24,0.07);}
 .rrow::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;}
@@ -76,6 +76,8 @@ html,body{background:var(--bg);color:#fff;font-family:'Barlow',sans-serif;overfl
 .rrow.L::before{background:#8899AA;}
 
 .r-num{font-family:var(--mn);font-size:11px;color:rgba(255,255,255,0.22);}
+.r-photo{width:38px;height:38px;border-radius:4px;overflow:hidden;background:#0E2848;border:1px solid var(--bdr);}
+.r-photo img{width:100%;height:100%;object-fit:cover;object-position:top center;}
 .r-info{display:flex;align-items:center;gap:8px;min-width:0;}
 .r-flag{font-size:20px;flex-shrink:0;line-height:1;}
 /* NAME — FULL, NEVER CUT */
@@ -172,10 +174,10 @@ html,body{background:var(--bg);color:#fff;font-family:'Barlow',sans-serif;overfl
 
 /* STATS */
 .stats-wrap{display:flex;flex-direction:column;gap:0;}
-.stat-row{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;border-bottom:1px solid rgba(255,255,255,0.06);background:rgba(255,255,255,0.03);position:relative;}
+.stat-row{display:flex;align-items:center;justify-content:space-between;padding:9px 14px;border-bottom:1px solid rgba(255,255,255,0.06);background:rgba(255,255,255,0.03);position:relative;}
 .stat-row::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;}
 .stat-label{font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.38);}
-.stat-num{font-family:'Bebas Neue',sans-serif;font-size:36px;letter-spacing:1px;line-height:1;}
+.stat-num{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:1px;line-height:1;}
 .stat-bar-wrap{position:absolute;bottom:0;left:4px;right:0;height:3px;background:rgba(255,255,255,0.08);}
 .stat-fill{height:100%;width:0;transition:width 0.9s cubic-bezier(0.25,1,0.5,1);}
 
@@ -282,7 +284,7 @@ html,body{background:var(--bg);color:#fff;font-family:'Barlow',sans-serif;overfl
 }
 .cmp-card-label {
   font-family: 'Bebas Neue', sans-serif; font-size: 13px;
-  letter-spacing: 4px; color: #E8341A;
+  letter-spacing: 4px; color: #E10600;
   padding: 8px 14px 4px;
   background: rgba(232,52,26,0.08);
   border-bottom: 1px solid rgba(232,52,26,0.2);
@@ -337,7 +339,7 @@ html,body{background:var(--bg);color:#fff;font-family:'Barlow',sans-serif;overfl
   border-left: 3px solid transparent;
 }
 .cmp-stat.win  { background: rgba(0,210,106,0.1);  border-left-color: #00D26A; }
-.cmp-stat.lose { background: rgba(232,52,26,0.07); border-left-color: #E8341A; }
+.cmp-stat.lose { background: rgba(232,52,26,0.07); border-left-color: #E10600; }
 .cmp-stat.tie  { background: rgba(245,197,24,0.06); border-left-color: #F5C518; }
 .cmp-stat-lbl {
   font-family: 'Barlow Condensed', sans-serif; font-size: 10px;
@@ -348,7 +350,7 @@ html,body{background:var(--bg);color:#fff;font-family:'Barlow',sans-serif;overfl
   font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 1px;
 }
 .cmp-stat.win  .cmp-stat-num { color: #00D26A; }
-.cmp-stat.lose .cmp-stat-num { color: #E8341A; }
+.cmp-stat.lose .cmp-stat-num { color: #E10600; }
 .cmp-stat.tie  .cmp-stat-num { color: #F5C518; }
 
 /* Career/bio strip */
@@ -367,7 +369,7 @@ html,body{background:var(--bg);color:#fff;font-family:'Barlow',sans-serif;overfl
   color: #fff; margin-top: 1px; line-height: 1;
 }
 .cmp-bio-val.win  { color: #00D26A; }
-.cmp-bio-val.lose { color: #E8341A; }
+.cmp-bio-val.lose { color: #E10600; }
 .cmp-bio-val.tie  { color: #F5C518; }
 
 /* Traits strip */
@@ -387,13 +389,13 @@ html,body{background:var(--bg);color:#fff;font-family:'Barlow',sans-serif;overfl
 }
 .cmp-ai-title {
   font-family: 'Bebas Neue', sans-serif; font-size: 18px;
-  letter-spacing: 3px; color: #E8341A; margin-bottom: 10px;
+  letter-spacing: 3px; color: #E10600; margin-bottom: 10px;
   display: flex; align-items: center; gap: 8px;
 }
 .cmp-ai-badge {
   font-family: 'Barlow Condensed', sans-serif; font-size: 9px;
   font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
-  background: #E8341A; color: #fff; padding: 2px 6px; border-radius: 2px;
+  background: #E10600; color: #fff; padding: 2px 6px; border-radius: 2px;
 }
 .cmp-ai-text {
   font-family: 'Barlow', sans-serif; font-size: 13px;
@@ -423,7 +425,7 @@ html,body{background:var(--bg);color:#fff;font-family:'Barlow',sans-serif;overfl
 }
 </style>
 </head>
-<body><div id="exit-bar" style="position:sticky;top:0;z-index:9999;background:#0B3D6B;border-bottom:3px solid #E8341A;height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 14px;flex-shrink:0;">
+<body><div id="exit-bar" style="position:sticky;top:0;z-index:9999;background:#0B3D6B;border-bottom:3px solid #E10600;height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 14px;flex-shrink:0;">
   <span style="font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.5);">NAMC Draft Pool 2027</span>
   <button onclick="window.close()" style="font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#111111;background:#F5C518;padding:7px 14px;border:none;cursor:pointer;">&#x2715; Close</button>
 </div>
@@ -463,20 +465,17 @@ html,body{background:var(--bg);color:#fff;font-family:'Barlow',sans-serif;overfl
     <button class="f-btn on" id="fp-all" onclick="fp('all')">All</button>
     <button class="f-btn pr" id="fp-350" onclick="fp('350')">350</button>
     <button class="f-btn pm" id="fp-250" onclick="fp('250')">250</button>
-    <button class="f-btn" id="fp-125" onclick="fp('125')">125</button>
+    <button class="f-btn" id="fp-125" onclick="fp('125')">250P</button>
     <button class="f-btn pw" id="fp-womens" onclick="fp('womens')">Women's Pro</button>
   </div>
   <div class="f-row">
-    <span class="f-lbl">Champ:</span>
-    <button class="f-btn on" id="fc-all" onclick="fc('all')">4S+2S</button>
-    <button class="f-btn" id="fc-4s" onclick="fc('4s')">4-Stroke</button>
-    <button class="f-btn" id="fc-2s" onclick="fc('2s')">2-Stroke</button>
     <div class="f-search"><input type="text" id="si" placeholder="Search..." oninput="doSearch(this.value)"></div>
   </div>
 </div>
 
 <div class="list-hdr">
   <span class="lh">#</span>
+  <span class="lh"></span>
   <span class="lh">Rider</span>
   <span class="lh c" onclick="sortOvr()">OVR</span>
   <span class="lh c" onclick="sortWins()">W</span>
@@ -576,14 +575,15 @@ function render(){
   for(var i=0;i<list.length;i++){
     var r=list[i], cls=oc(r.ovr);
     var rc=i===0?'color:#F5C518;font-weight:bold;':i===1?'color:#C0C0C0;':i===2?'color:#CD7F32;':'';
-    var pl=r.pool==='350'?'350 CLASS':r.pool==='250'?'250 CLASS':r.pool==='125'?'125 CLASS':"WOMEN'S PRO";
+    var pl=r.pool==='350'?'350 CLASS':r.pool==='250'?'250 CLASS':r.pool==='125'?'250P CLASS':"WOMEN'S PRO";
     var cc=r.champ==='4s'?'fs':'ts';
     h+='<div class="rrow '+cls+'" onclick="openCard('+r.id+')">';
     h+='<div class="r-num" style="'+rc+'">'+pad(i+1,2)+'</div>';
+    h+='<div class="r-photo"><img src="'+getPhoto(r.id,'thumb')+'" alt=""></div>';
     h+='<div class="r-info"><span class="r-flag">'+r.flag+'</span><div class="r-name">'+r.name+'</div></div>';
     h+='<div style="display:flex;justify-content:center"><div class="ovr '+cls+'"><span class="on">'+r.ovr+'</span><span class="ol">OVR</span></div></div>';
     h+='<div class="r-wins">'+r.wins+'</div>';
-    h+='<div class="r-pool"><span class="pp '+r.pool+'">'+pl+'</span><span class="cp '+cc+'">'+r.champ.toUpperCase()+'</span></div>';
+    h+='<div class="r-pool"><span class="pp '+r.pool+'">'+pl+'</span></div>';
     h+='</div>';
   }
   el.innerHTML=h;
@@ -591,7 +591,7 @@ function render(){
 
 function buildCard(r){
   var cls=oc(r.ovr);
-  var pl=r.pool==='350'?'350 CLASS':r.pool==='250'?'250 CLASS':r.pool==='125'?'125 CLASS':"WOMEN'S PRO";
+  var pl=r.pool==='350'?'350 CLASS':r.pool==='250'?'250 CLASS':r.pool==='125'?'250P CLASS':"WOMEN'S PRO";
   var keys=['gates','consistency','racecraft','adaptability','smoothness'];
   var lbls=['Gate Starts','Consistency','Racecraft','Adaptability','Smoothness'];
   var photo=getPhoto(r.id,'card');
@@ -600,7 +600,7 @@ function buildCard(r){
   var hdr='<div class="card-portrait"><img src="'+photo+'" alt="'+r.name+'">'+
     '<div class="card-ovr-badge"><div class="ovr '+cls+'"><span class="on">'+r.ovr+'</span><span class="ol">OVR</span></div></div></div>'+
     '<div class="card-info">'+
-    '<div class="card-pool-row"><span class="pp '+r.pool+'">'+pl+'</span><span class="cp '+(r.champ==='4s'?'fs':'ts')+'">'+r.champ.toUpperCase()+'</span></div>'+
+    '<div class="card-pool-row"><span class="pp '+r.pool+'">'+pl+'</span></div>'+
     '<div class="card-name">'+r.flag+' '+r.name+'</div>'+
     '<div class="card-origin">'+r.country+' &middot; Age '+r.age+'</div>'+
     '<div class="card-status-row"><div class="csdot '+r.status+'"></div><span class="cstxt '+r.status+'">'+(r.status==='available'?'Available':'Watch List')+'</span></div>'+
@@ -631,7 +631,7 @@ function buildCard(r){
     '<span class="stat-num" style="color:'+sc(r.ovr)+'">'+r.ovr+'</span>'+
     '<div class="stat-bar-wrap"><div id="bf'+r.id+'-ovr" class="stat-fill" style="background:'+bg(r.ovr)+'"></div></div>'+
     '</div></div>';
-  if(r.womens) t0+='<div class="vision-box" style="margin-top:14px"><div class="vision-title">\u26a1 NAMC VISION</div><div class="vision-text">Factory support and daily training alongside elite men. Designed to push Women\u2019s Pro riders into the high 80s OVR within 3 seasons.</div></div>';
+  t0+=namcVision(r);
 
   // TAB 1: CAREER
   var t1='<div class="sec-hdr">Career History</div><table class="career-tbl"><thead><tr><th>Year</th><th>Series</th><th class="c">Fin</th><th class="c">W</th><th class="c">Pod</th></tr></thead><tbody>';
@@ -645,9 +645,9 @@ function buildCard(r){
   var agn=(r.agent==='TBD'||r.agent==='Self-Rep')?'No licensed agent. Contact through NAMC draft portal.':'NAMC Licensed Agent. Contact via team portal.';
   var t2='<div class="sec-hdr">Contract Details</div><div class="contract-wrap">'+
     '<div class="ctr-box"><div class="ctr-lbl">Contract Minimum</div><div class="ctr-val gold">'+r.min+'</div><div class="ctr-sub">Per NAMC rulebook</div></div>'+
-    '<div class="ctr-box"><div class="ctr-lbl">Appearance Fee</div><div class="ctr-val grn">$24,000</div><div class="ctr-sub">$1,000 \u00d7 24 rounds</div></div>'+
+    '<div class="ctr-box"><div class="ctr-lbl">Appearance Fee</div><div class="ctr-val grn">$20,000</div><div class="ctr-sub">$1,000 \u00d7 20 rounds</div></div>'+
     '<div class="ctr-box"><div class="ctr-lbl">Debut Bonus</div><div class="ctr-val gold">$25,000</div><div class="ctr-sub">First contract only</div></div>'+
-    '<div class="ctr-box"><div class="ctr-lbl">Championship</div><div class="ctr-val">'+(r.champ==='4s'?'4-Stroke':'2-Stroke')+'</div><div class="ctr-sub">Declared at draft</div></div>'+
+    
     '<div class="agent-box"><div class="ctr-lbl">Agent / Rep</div><div class="agent-name">'+r.agent+'</div><div class="agent-note">'+agn+'</div></div></div>';
 
   TABS=[t0,t1,t2];
@@ -752,7 +752,7 @@ function cmpOc(o){ return o>=92?'E':o>=82?'H':o>=70?'M':o>=60?'S':o>=50?'F':'L';
 
 function buildCmpCard(r, other, label) {
   var cls = cmpOc(r.ovr);
-  var pl = r.pool==='350'?'350 CLASS':r.pool==='250'?'250 CLASS':r.pool==='125'?'125 CLASS':"WOMEN'S PRO";
+  var pl = r.pool==='350'?'350 CLASS':r.pool==='250'?'250 CLASS':r.pool==='125'?'250P CLASS':"WOMEN'S PRO";
   var photo = getPhoto(r.id, 'thumb');
   var keys  = ['gates','consistency','racecraft','adaptability','smoothness'];
   var abbrs = ['Gates','Consistency','Racecraft','Adaptability','Smoothness'];
@@ -786,11 +786,51 @@ function buildCmpCard(r, other, label) {
   for (var i=0; i<r.traits.length; i++) {
     var tr = r.traits[i];
     var icon = tr.t==='pos'?'&#10003;':tr.t==='neg'?'&#10007;':'&#9672;';
-    var col = tr.t==='pos'?'#00D26A':tr.t==='neg'?'#E8341A':'#F5C518';
+    var col = tr.t==='pos'?'#00D26A':tr.t==='neg'?'#E10600':'#F5C518';
     h += '<div class="cmp-trait"><span class="cmp-trait-icon" style="color:' + col + '">' + icon + '</span><span class="cmp-trait-text"><span class="cmp-trait-name">' + tr.n + '</span>' + tr.d + '</span></div>';
   }
   h += '</div></div>';
   return h;
+}
+
+function namcVision(r){
+  var pool=RIDERS.filter(function(x){return x.pool===r.pool;});
+  if(!pool.length) return '';
+  var keys=['gates','consistency','racecraft','adaptability','smoothness'];
+  var lbls=['Gate Starts','Consistency','Racecraft','Adaptability','Smoothness'];
+  function avg(k){var s=0;for(var i=0;i<pool.length;i++)s+=pool[i].stats[k];return Math.round(s/pool.length);}
+  var above=[],below=[];
+  for(var i=0;i<keys.length;i++){var d=r.stats[keys[i]]-avg(keys[i]);if(d>=3)above.push(lbls[i]+' (+'+d+')');else if(d<=-3)below.push(lbls[i]+' ('+d+')');}
+  var ovrAvg=Math.round(pool.reduce(function(s,x){return s+x.ovr;},0)/pool.length);
+  var sorted=pool.slice().sort(function(a,b){return b.ovr-a.ovr;});
+  var rank=1;for(var i=0;i<sorted.length;i++){if(sorted[i].id===r.id){rank=i+1;break;}}
+  var poolName=r.pool==='350'?'350':r.pool==='250'?'250':r.pool==='125'?'250P':"Women's Pro";
+  var txt='Ranks #'+rank+' of '+pool.length+' in the '+poolName+' pool ('+r.ovr+' OVR vs '+ovrAvg+' pool average). ';
+  if(above.length)txt+='Above the field in '+above.join(', ')+'. ';
+  if(below.length)txt+='Below the field in '+below.join(', ')+'.';
+  if(!above.length&&!below.length)txt+='Tracks close to the pool average across the board.';
+  return '<div class="vision-box" style="margin-top:14px"><div class="vision-title">\u26a1 NAMC VISION</div><div class="vision-text">'+txt+'</div></div>';
+}
+
+function generateScoutingReport(r1,r2){
+  var keys=['gates','consistency','racecraft','adaptability','smoothness'];
+  var lbls=['gate starts','consistency','racecraft','adaptability','smoothness'];
+  var e1=[],e2=[];
+  for(var i=0;i<keys.length;i++){
+    var a=r1.stats[keys[i]],b=r2.stats[keys[i]];
+    if(a>b)e1.push(lbls[i]+' ('+a+' vs '+b+')');
+    else if(b>a)e2.push(lbls[i]+' ('+b+' vs '+a+')');
+  }
+  function lead(n,arr){return arr.length?n+' leads in '+arr.join(', ')+'.':n+' leads in no single category.';}
+  var p1='SKILL BREAKDOWN. '+lead(r1.name,e1)+' '+lead(r2.name,e2)+' Overall rating favors '+(r1.ovr>=r2.ovr?(r1.name+' at '+r1.ovr+' OVR'):(r2.name+' at '+r2.ovr+' OVR'))+'.';
+  var p2='RESUME. '+r1.name+': '+r1.wins+' career wins, '+r1.exp+' experience. '+r2.name+': '+r2.wins+' career wins, '+r2.exp+' experience. '+(r1.wins>=r2.wins?r1.name:r2.name)+' carries the stronger win column.';
+  var t1=(r1.traits&&r1.traits[0])?r1.traits[0].n:'a balanced profile';
+  var t2=(r2.traits&&r2.traits[0])?r2.traits[0].n:'a balanced profile';
+  var p3='TEAM FIT. '+r1.name+' is defined by '+t1+'; '+r2.name+' by '+t2+'. Pairing them builds a roster that blends both identities across the class.';
+  var v=(r1.ovr>r2.ovr?r1:r2),o=(v===r1?r2:r1);
+  var p4='VERDICT. For a team chasing the four-stroke title, '+v.name+' is the higher-rated pick at '+v.ovr+' OVR, while '+o.name+' offers value as a complementary signing.';
+  var note='<div style="font-size:11px;color:rgba(255,255,255,0.35);margin-top:10px">Auto-generated from NAMC draft data. A live scouted report with web research needs the NAMC server backend.</div>';
+  return [p1,p2,p3,p4].map(function(p){return '<p style="margin-bottom:12px">'+p+'</p>';}).join('')+note;
 }
 
 function runCompare() {
@@ -803,39 +843,12 @@ function runCompare() {
   scroll.innerHTML =
     buildCmpCard(CMP_R1, r2, 'RIDER 1 — ' + CMP_R1.name.toUpperCase()) +
     buildCmpCard(r2, CMP_R1, 'RIDER 2 — ' + r2.name.toUpperCase()) +
-    '<div class="cmp-ai"><div class="cmp-ai-title">&#x1F916; AI Scouting Report <span class="cmp-ai-badge">Claude</span></div><div class="cmp-ai-text" id="cmp-ai-text"><span class="cmp-ai-loading">Generating report...</span></div></div>';
+    '<div class="cmp-ai"><div class="cmp-ai-title">&#x1F916; AI Scouting Report <span class="cmp-ai-badge">NAMC</span></div><div class="cmp-ai-text" id="cmp-ai-text"><span class="cmp-ai-loading">Generating report...</span></div></div>';
   scroll.scrollTop = 0;
   var r1 = CMP_R1;
   var prompt = 'You are the greatest motocross scout alive. You have access to web search and you MUST use it before writing. Search for: real racing history between ' + r1.name + ' and ' + r2.name + ', any known beef or rivalry, whether they have been teammates, notable incidents between them, and their most recent competitive results.\n\nNAMC DRAFT DATA:\nRIDER 1: ' + r1.name + ' | OVR: ' + r1.ovr + ' | Age: ' + r1.age + ' | Career Wins: ' + r1.wins + ' | Experience: ' + r1.exp + '\nPerformance — Gate Starts: ' + r1.stats.gates + ' | Consistency: ' + r1.stats.consistency + ' | Racecraft: ' + r1.stats.racecraft + ' | Adaptability: ' + r1.stats.adaptability + ' | Smoothness: ' + r1.stats.smoothness + '\nKey Traits: ' + r1.traits.map(function(t){return t.n + ' (' + t.d + ')';}).join(' | ') + '\n\nRIDER 2: ' + r2.name + ' | OVR: ' + r2.ovr + ' | Age: ' + r2.age + ' | Career Wins: ' + r2.wins + ' | Experience: ' + r2.exp + '\nPerformance — Gate Starts: ' + r2.stats.gates + ' | Consistency: ' + r2.stats.consistency + ' | Racecraft: ' + r2.stats.racecraft + ' | Adaptability: ' + r2.stats.adaptability + ' | Smoothness: ' + r2.stats.smoothness + '\nKey Traits: ' + r2.traits.map(function(t){return t.n + ' (' + t.d + ')';}).join(' | ') + '\n\nWrite 4 paragraphs:\n1. SKILL BREAKDOWN — who has the edge in each area and why it matters on the NAMC circuit\n2. HISTORY & CHEMISTRY — what do you know about these two from real racing history? Have they raced each other? Any beef, incidents, rivalries, or friendship? Have they been teammates? What is their dynamic?\n3. TEAM FIT — do their styles complement or create conflict? What kind of team culture do they create together?\n4. CHAMPIONSHIP VERDICT — which pairing makes more sense for a team chasing both 4S and 2S titles?\n\nBe specific. Name real races, real incidents, real years. If you find nothing on their history together, say so honestly. Do NOT generate the same generic report every time — dig into what makes THESE two riders unique.';
-  fetch('https://api.anthropic.com/v1/messages', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      model: 'claude-sonnet-4-20250514',
-      max_tokens: 1200,
-      tools: [{ type: 'web_search_20250305', name: 'web_search' }],
-      messages: [{ role: 'user', content: prompt }]
-    })
-  })
-  .then(function(res){ return res.json(); })
-  .then(function(data){
-    // Claude with web search returns mixed content blocks — extract all text blocks
-    var text = '';
-    if (data.content && data.content.length) {
-      for (var i=0; i<data.content.length; i++) {
-        if (data.content[i].type === 'text' && data.content[i].text) {
-          text += data.content[i].text;
-        }
-      }
-    }
-    if (!text) text = 'Report unavailable — check API connection.';
-    var el = document.getElementById('cmp-ai-text');
-    if (el) el.innerHTML = text.split('\n\n').filter(function(p){ return p.trim(); }).map(function(p){ return '<p style="margin-bottom:12px">'+p.trim()+'</p>'; }).join('');
-  })
-  .catch(function(err){
-    var el = document.getElementById('cmp-ai-text');
-    if (el) el.innerHTML = '<p style="color:#FF6B6B">Could not generate: ' + err.message + '</p>';
-  });
+  var el = document.getElementById('cmp-ai-text');
+  if (el) el.innerHTML = generateScoutingReport(r1, r2);
 }
 
 </script>
