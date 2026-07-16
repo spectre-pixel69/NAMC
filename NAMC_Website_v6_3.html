@@ -188,13 +188,13 @@ footer{background:var(--blue);border-top:3px solid var(--red);padding:22px 40px;
 .ptbl td.gold{color:#8B6914;font-weight:700;}
 /* ── MOBILE / RESPONSIVE — auto-adapts to phone vs laptop ── */
 @media(max-width:768px){
-  nav{padding:0 12px;gap:10px;}
+  nav{flex-wrap:wrap;height:auto;padding:8px 12px;gap:8px;}
   .nwm{font-size:18px;letter-spacing:2px;}
   .ndiv{display:none;}
-  .nlinks{gap:14px;flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
+  .nlinks{order:3;flex:1 0 100%;margin:0;gap:16px;flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
   .nlinks::-webkit-scrollbar{display:none;}
-  .nlinks a{white-space:nowrap;}
-  .ncta{flex-shrink:0;padding:8px 12px;}
+  .nlinks a{white-space:nowrap;font-size:12px;}
+  .ncta{order:4;flex:1 0 100%;margin:0;padding:11px;}
   .hero{flex-direction:column;min-height:0;}
   .hero-overlay{background:linear-gradient(180deg,rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.78) 100%);}
   .hero-left{padding:32px 20px;}
